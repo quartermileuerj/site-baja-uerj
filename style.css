@@ -61,7 +61,7 @@ header nav a {
     text-decoration: none;
     color: var(--cor-secundaria);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.7rem;
     transition: color 0.3s ease;
 }
 
@@ -232,7 +232,7 @@ footer .container {
 
 .social-links a {
     color: var(--cor-fundo);
-    font-size: 2rem;
+    font-size: 2.5rem;
     transition: color 0.3s ease;
 }
 
