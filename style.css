@@ -185,7 +185,37 @@ h2 {
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* Seção Patrocinadores */
+.patrocinadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
 
+.patrocinador-card {
+    background: var(--cor-fundo);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.patrocinador-card img {
+    max-width: 180px; /* Ajuste o tamanho do logo conforme necessário */
+    margin-bottom: 1.5rem;
+    filter: grayscale(100%); /* Deixa o logo em preto e branco */
+    transition: filter 0.3s ease;
+}
+
+.patrocinador-card:hover img {
+    filter: grayscale(0%); /* Deixa o logo colorido ao passar o mouse */
+}
+
+.patrocinador-card h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 0.5rem;
+}
 /* Rodapé */
 footer {
     background-color: var(--cor-secundaria);
