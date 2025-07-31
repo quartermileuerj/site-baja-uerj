@@ -34,7 +34,7 @@ body {
 /* Cabeçalho e Navegação */
 header {
     background-color: var(--cor-fundo);
-    padding: 1rem 0;
+    padding: 2rem 0;
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
