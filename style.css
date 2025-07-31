@@ -60,8 +60,8 @@ header nav ul {
 header nav a {
     text-decoration: none;
     color: var(--cor-secundaria);
-    font-weight: 700;
-    font-size: 0.7rem;
+    font-weight: 500;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
@@ -232,7 +232,7 @@ footer .container {
 
 .social-links a {
     color: var(--cor-fundo);
-    font-size: 2.5rem;
+    font-size: 4rem;
     transition: color 0.3s ease;
 }
 
