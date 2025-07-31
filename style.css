@@ -34,7 +34,7 @@ body {
 /* Cabeçalho e Navegação */
 header {
     background-color: var(--cor-fundo);
-    padding: 2rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
@@ -195,7 +195,7 @@ h2 {
 
 .patrocinador-card {
     background: var(--cor-fundo);
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
