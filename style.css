@@ -239,3 +239,57 @@ footer .container {
 .social-links a:hover {
     color: #c13584; /* Cor do Instagram */
 }
+
+/* Aplica estes estilos em telas com 768px de largura ou menos */
+@media (max-width: 768px) {
+
+    /* Ajusta o tamanho dos títulos para telas menores */
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* --- AJUSTES DO CABEÇALHO --- */
+    header .container {
+        flex-direction: column; /* Coloca o logo e o menu um sobre o outro */
+        gap: 1rem;
+    }
+
+    header nav ul {
+        flex-wrap: wrap; /* Permite que os itens do menu quebrem a linha */
+        justify-content: center;
+        gap: 1rem; /* Diminui o espaço entre os itens do menu */
+    }
+
+    /* --- AJUSTES DA SEÇÃO HERO --- */
+    .hero h1 {
+        font-size: 2.8rem; /* Diminui a fonte do título principal */
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    /* --- AJUSTES DAS SEÇÕES EM GERAL --- */
+    section {
+        padding: 3rem 0; /* Diminui o espaçamento das seções */
+    }
+
+    .container {
+        padding: 0 1rem; /* Diminui o espaçamento lateral */
+    }
+
+    /* --- AJUSTES DA EQUIPE, GALERIA E PATROCINADORES --- */
+    /* Faz com que os grids tenham apenas uma coluna */
+    .membros-grid,
+    .galeria-grid,
+    .patrocinadores-grid {
+        grid-template-columns: 1fr; /* Força uma única coluna */
+        gap: 1.5rem;
+    }
+
+    /* --- AJUSTES DO RODAPÉ --- */
+    footer .container {
+        flex-direction: column; /* Coloca o texto e o ícone um sobre o outro */
+        gap: 1rem;
+    }
+}
