@@ -366,7 +366,7 @@ footer .container {
     .galeria-grid,
     .patrocinadores-grid {
         grid-template-columns: 1fr; /* Força uma única coluna */
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     /* --- AJUSTES DO RODAPÉ --- */
@@ -375,3 +375,4 @@ footer .container {
         gap: 1rem;
     }
 }
+
