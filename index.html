@@ -17,7 +17,8 @@
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#equipe">Equipe</a></li>
-                    <li><a href="#competicoes">Competições</a></li>
+                    <li><a href="#carrossel-historico">Sistemas</a></li>
+		    <li><a href="#competicoes">Competições</a></li>
                     <li><a href="#galeria">Galeria</a></li>
                     <li><a href="#patrocinadores">Patrocinadores</a></li>
                 </ul>
@@ -98,17 +99,64 @@ pesquisa e extensão.</p>
                 </div>
             </div>
         </section>
+	
+	<section id="carrossel-historico">
+    	  <div class="container">
+        	<h2>Sistemas</h2>
+        	<div class="carrossel-container">
+            		 <div class="carrossel-slide fade">
+                		<img src="sistemas/estrutura.png" alt="Descrição da Imagem 1">
+                		<div class="legenda-carrossel">Estrutura</div>
+            	         </div>
 
+            	  	 <div class="carrossel-slide fade">
+                		<img src="sistemas/suspensao.jfif" alt="Descrição da Imagem 2">
+                		<div class="legenda-carrossel">Suspensão</div>
+            	 	 </div>
+
+            	 	 <div class="carrossel-slide fade">
+               			<img src="sistemas/transmissao.jfif" alt="Descrição da Imagem 3">
+               		 	<div class="legenda-carrossel">Transmissão</div>
+           	  	 </div>
+
+			 <div class="carrossel-slide fade">
+               			<img src="sistemas/freio.jfif" alt="Descrição da Imagem 3">
+               		 	<div class="legenda-carrossel">Freio</div>
+           	  	 </div>
+
+			 <div class="carrossel-slide fade">
+               			<img src="sistemas/eletronica.jfif" alt="Descrição da Imagem 3">
+               		 	<div class="legenda-carrossel">Eletrônica</div>
+           	  	 </div>
+  		
+          	  	 <a class="prev">&#9664;</a>
+          	  	 <a class="next">&#9654;</a>
+      	  	 </div>
+   	  </div>
+	</section>
+	
         <section id="competicoes">
             <div class="container">
                 <h2>Competições</h2>
-                <div class="competicao-item">
-                    <h3>Baja SAE Brasil - Etapa Nacional 2020</h3>
-                    <p>.</p>
+                
+		<div class="competicao-item">
+                    <h3>Baja SAE Brasil</h3>
+                    <p>O BAJA SAE BRASIL reúne as melhores universidades de engenharia do Brasil, cada uma forma uma equipe composta de professores e estudantes de graduação em engenharia. Anualmente ocorrem duas etapas, uma regional e outra nacional. Na etapa regional acontece em 3 regiões de acordo com a localização geográfica da universidade, sudeste, sul e nordeste. Na etapa nacional todas as equipes participam e os três primeiros colocados irão para a etapa BAJA SAE Internacional que acontece nos Estados Unidos.</p>
+		<h3>Avaliaçôes</h3>
+		<p>As avaliações das competições são feitas em três categorias:</p>
+		<p>Avaliações Estáticas – São apresentados dois relatórios, um de estudos de engenharia e processos utilizados pela equipe, outro sobre os custos do projeto levando-se em consideração o custo-benefício e não a utilização do menor custo.</p>
+		<p>Avaliações Dinâmicas – O veículo é avaliado para atender condições de uso específicas conforme determinado em regulamento.</p>
+		<p>Avaliação de Resistência - O Enduro de Resistência é uma prova com 4 horas de duração no qual o veículo cumpre um percurso em pista com terreno irregular, off-road, vencendo diversos obstáculos como ondulações, lama, rampa, trecho com pedras e troncos. A pontuação é determinada pelo número de voltas completas ao final das 4 horas.</p>
                 </div>
+
+		<div class="competicao-item">
+                    <h3>Baja SAE Brasil - Etapa Nacional 2020</h3>
+                    <p>Nossa participação foi uma jornada de grande aprendizado e superação.</p>
+                </div>
+
                 <div class="competicao-item">
-                    <h3>Baja SAE </h3>
-                    <p>.</p>
+                    <h3>Baja SAE - Etapa Nacional 2019 </h3>
+                    <p>Foi uma excelente oportunidade para trocar experiências e desafios.</p>
                 </div>
             </div>
         </section>
@@ -134,7 +182,6 @@ pesquisa e extensão.</p>
 		    <div class="patrocinador-card">
                         <img src="patrocinadores/nobreak.png" alt="Logo do Patrocinador">
                         <h3>Eletrônica Nobreak</h3>
-                        <p>Patrocinador de Eletrônica.</p>
                     </div>
                    
                 </div>
@@ -145,17 +192,63 @@ pesquisa e extensão.</p>
     <footer>
         <div class="container">
             <p>&copy; 2025 QM Baja UERJ. Todos os direitos reservados.</p>
+	    <p>Contato: baja.uerj@gmail.com.</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/quartermilebaja/?hl=pt" target="_blank" title="Siga-nos no Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
+		
+		<a href="https://www.linkedin.com/in/quarter-mile-uerj-90445b370/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=br" target="_blank" title="Conecte-se conosco no LinkedIn">
+        	    <i class="fab fa-linkedin-in"></i>
+   		</a>
             </div>
         </div>
     </footer>
+    
 
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Função para avançar ou voltar nos slides
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Função principal que controla qual slide é exibido
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("carrossel-slide");
+            
+            // Volta para o primeiro slide se chegar ao final
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            
+            // Vai para o último slide se voltar a partir do primeiro
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            
+            // Esconde todos os slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            // Exibe apenas o slide atual
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        // Adiciona os eventos de clique aos botões
+        document.querySelector(".prev").addEventListener("click", function() {
+            plusSlides(-1);
+        });
+
+        document.querySelector(".next").addEventListener("click", function() {
+            plusSlides(1);
+        });
+    </script>
+    </body>
+</html>
 </body>
 </html>
-
-
-
-
