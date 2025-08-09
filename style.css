@@ -204,18 +204,19 @@ h2 {
 .patrocinador-card img {
     max-width: 180px; /* Ajuste o tamanho do logo conforme necessário */
     margin-bottom: 1.5rem;
-    filter: grayscale(0%); /* Deixa o logo em preto e branco */
+    filter: grayscale(0%);
     transition: filter 0.3s ease;
 }
 
 .patrocinador-card:hover img {
-    filter: grayscale(10%); /* Deixa o logo colorido ao passar o mouse */
+    filter: grayscale(10%);
 }
 
 .patrocinador-card h3 {
     color: var(--cor-primaria);
     margin-bottom: 0.5rem;
 }
+
 /* Rodapé */
 footer {
     background-color: var(--cor-secundaria);
@@ -249,130 +250,143 @@ footer .container {
   gap: 30px;     /* Cria um espaço de 30px entre cada ícone */
 }
 
-#carrossel-historico {
-    background-color: var(--cor-fundo); /* Fundo branco para esta seção */
+/* === ESTILOS PARA A JANELA MODAL DE SISTEMAS (Opção 2: Menu Lateral) === */
+
+/* Animação para o menu deslizar */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
-.carrossel-container {
-    position: relative;
-    max-width: 900px; /* Largura máxima do carrossel */
-    margin: auto;
-    overflow: hidden; /* Garante que imagens maiores não "vazem" */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.carrossel-slide {
-    display: none; /* Esconde todos os slides por padrão */
-    width: 100%;
-}
-
-.carrossel-slide img {
-    width: 100%;
-    height: 500px; /* Altura fixa para as imagens */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-    vertical-align: middle;
-}
-
-.legenda-carrossel {
-    color: #fff;
-    background-color: rgba(26, 42, 76, 0.85); /* Fundo azul escuro semi-transparente */
-    font-size: 2rem;
-    padding: 1rem;
-    position: absolute;
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
     top: 0;
     width: 100%;
-    text-align: center;
-    font-weight: 500;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    /* Alinha o conteúdo à direita */
+    justify-content: flex-end; 
+    align-items: flex-start; /* Alinha no topo */
 }
 
-/* Botões de Próximo e Anterior */
-.prev, .next {
-    cursor: pointer;
+.modal-conteudo {
+    background-color: var(--cor-fundo);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    /* Largura e altura do menu lateral */
+    width: 320px;
+    max-width: 80%;
+    height: 100%;
+    position: relative;
+    padding: 2rem;
+    text-align: left; /* Alinha texto à esquerda */
+    /* Aplica a animação */
+    animation: slideIn 0.4s ease-out;
+}
+
+.fechar-modal {
+    color: #aaa;
     position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -30px; /* Centraliza verticalmente */
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.3);
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.fechar-modal:hover,
+.fechar-modal:focus {
+    color: var(--cor-secundaria);
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(26, 42, 76, 0.9); /* Azul primário ao passar o mouse */
+/* Ajusta o H2 para o novo layout */
+.modal-conteudo h2 {
+    text-align: left;
+    margin-bottom: 1rem;
 }
 
-/* Animação de Fade */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+/* Ajusta o parágrafo */
+.modal-conteudo p {
+    text-align: left;
+    margin-bottom: 2rem;
 }
 
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+.modal-links {
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem; 
 }
+
+.link-sistema {
+    display: block;
+    background-color: var(--cor-fundo-alt);
+    color: var(--cor-primaria);
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-align: center; /* Centraliza o texto no botão */
+}
+
+.link-sistema:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    transform: translateX(5px);
+}
+
 /* Aplica estes estilos em telas com 768px de largura ou menos */
 @media (max-width: 768px) {
-
-    /* Ajusta o tamanho dos títulos para telas menores */
     h2 {
         font-size: 2rem;
     }
 
-    /* --- AJUSTES DO CABEÇALHO --- */
     header .container {
-        flex-direction: column; /* Coloca o logo e o menu um sobre o outro */
+        flex-direction: column;
         gap: 1rem;
     }
 
     header nav ul {
-        flex-wrap: wrap; /* Permite que os itens do menu quebrem a linha */
+        flex-wrap: wrap; 
         justify-content: center;
-        gap: 1rem; /* Diminui o espaço entre os itens do menu */
+        gap: 1rem; 
     }
 
-    /* --- AJUSTES DA SEÇÃO HERO --- */
     .hero h1 {
-        font-size: 2.8rem; /* Diminui a fonte do título principal */
+        font-size: 2.8rem;
     }
 
     .hero p {
         font-size: 1.2rem;
     }
     
-    /* --- AJUSTES DAS SEÇÕES EM GERAL --- */
     section {
-        padding: 3rem 0; /* Diminui o espaçamento das seções */
+        padding: 3rem 0;
     }
 
     .container {
-        padding: 0 1rem; /* Diminui o espaçamento lateral */
+        padding: 0 1rem;
     }
 
-    /* --- AJUSTES DA EQUIPE, GALERIA E PATROCINADORES --- */
-    /* Faz com que os grids tenham apenas uma coluna */
     .membros-grid,
     .galeria-grid,
     .patrocinadores-grid {
-        grid-template-columns: 1fr; /* Força uma única coluna */
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    footer .container {
+        flex-direction: column;
         gap: 1rem;
     }
 
-    /* --- AJUSTES DO RODAPÉ --- */
-    footer .container {
-        flex-direction: column; /* Coloca o texto e o ícone um sobre o outro */
-        gap: 1rem;
+    .modal-conteudo {
+        padding: 2rem 1.5rem;
     }
 }
-
