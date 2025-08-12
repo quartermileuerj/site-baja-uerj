@@ -245,6 +245,9 @@ footer .container {
     color: #c13584; /* Cor do Instagram */
 }
 
+.social-links a i.fa-whatsapp {
+    color: #25db1f; /* Cor do whatsapp */
+}
 .social-links {
   display: flex; /* Alinha os ícones em uma linha */
   gap: 30px;     /* Cria um espaço de 30px entre cada ícone */
