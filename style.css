@@ -344,6 +344,44 @@ footer .container {
     transform: translateX(5px);
 }
 
+/* --- ESTILOS PARA O MAPA DE LOCALIZAÇÃO --- */
+
+#localizacao {
+    background-color: #f4f4f4; /* Um fundo levemente diferente para destacar a seção */
+    padding: 60px 0;
+    text-align: center;
+}
+
+#localizacao h2 {
+    margin-bottom: 20px;
+}
+
+#localizacao p {
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Container que vai segurar o mapa e garantir a proporção correta */
+.mapa-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 50%; /* Proporção da altura. Ajuste se necessário */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra suave */
+}
+
+/* Estilo que se aplica diretamente ao iframe do mapa */
+.mapa-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*mapa
 /* Aplica estes estilos em telas com 768px de largura ou menos */
 @media (max-width: 768px) {
     h2 {
