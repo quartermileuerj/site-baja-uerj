@@ -57,60 +57,61 @@ L.marker([-22.902685362332065, -43.22277031838951]).addTo(map)
 document.addEventListener('DOMContentLoaded', function() {
 
     // Lógica para o Modal de Sistemas (que você já tinha)
-    const modal = document.getElementById('modal-sistemas');
-    const btnAbrir = document.getElementById('abrir-modal-sistemas');
-    const btnFechar = document.querySelector('.fechar-modal');
+const modal = document.getElementById('modal-sistemas');
+const btnAbrir = document.getElementById('abrir-modal-sistemas');
+const btnFechar = document.querySelector('.fechar-modal');
 
-    if (btnAbrir) {
-        btnAbrir.onclick = function(event) {
-            event.preventDefault(); // Previne o comportamento padrão do link '#'
-            modal.style.display = "flex";
-        }
+if (btnAbrir) {
+    btnAbrir.onclick = function(event) {
+        event.preventDefault(); // Previne o comportamento padrão do link '#'
+        modal.style.display = "flex";
     }
+}
 
-    if (btnFechar) {
-        btnFechar.onclick = function() {
-            modal.style.display = "none";
-        }
+if (btnFechar) {
+    btnFechar.onclick = function() {
+        modal.style.display = "none";
     }
+}
     
     // Fecha o modal se o usuário clicar fora do conteúdo
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
+}
     
     // Fecha o modal quando um link interno dele é clicado
-    document.querySelectorAll('.link-sistema').forEach(link => {
-        link.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
+document.querySelectorAll('.link-sistema').forEach(link => {
+    link.addEventListener('click', () => {
+        modal.style.display = 'none';
     });
+});
 
 
     // --- NOVA LÓGICA PARA OS BOTÕES DE DESCRIÇÃO (ACCORDION) ---
 
-    const botoesDescricao = document.querySelectorAll('.botao-descricao');
+const botoesDescricao = document.querySelectorAll('.botao-descricao');
 
-    botoesDescricao.forEach(botao => {
-        botao.addEventListener('click', function() {
+botoesDescricao.forEach(botao => {
+    botao.addEventListener('click', function() {
             // Adiciona ou remove a classe 'ativo' do botão clicado
-            this.classList.toggle('ativo');
+        this.classList.toggle('ativo');
 
             // Seleciona o painel de conteúdo (que é o próximo elemento irmão do botão)
-            const conteudo = this.nextElementSibling;
+        const conteudo = this.nextElementSibling;
 
             // Verifica se o painel já tem uma 'max-height' definida (se está aberto)
-            if (conteudo.style.maxHeight) {
+        if (conteudo.style.maxHeight) {
                 // Se estiver aberto, fecha (define max-height como null/0)
-                conteudo.style.maxHeight = null;
-            } else {
+            conteudo.style.maxHeight = null;
+        } else {
                 // Se estiver fechado, abre (define max-height com o tamanho do seu conteúdo)
-                conteudo.style.maxHeight = conteudo.scrollHeight + "px";
-            }
-        });
+            conteudo.style.maxHeight = conteudo.scrollHeight + "px";
+        }
     });
+});
 
 });
 // Cod para botões descrição FIM
+
