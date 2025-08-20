@@ -20,7 +20,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--cor-fundo);
+    background-color: #fdfdfd;
     color: var(--cor-texto);
     line-height: 1.6;
 }
@@ -401,7 +401,7 @@ footer .container {
 
 .conteudo-descricao {
     padding: 0 18px;
-    background-color: var(--cor-fundo-alt);
+    background-color: var(--cor-fundo);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
