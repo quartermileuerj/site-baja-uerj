@@ -413,6 +413,7 @@ footer .container {
 .conteudo-descricao p {
     padding: 1rem 0; /* Espaçamento interno para o texto não colar nas bordas */
 }
+
 }
 /* Aplica estes estilos em telas com 768px de largura ou menos */
 @media (max-width: 768px) {
@@ -463,10 +464,7 @@ footer .container {
         padding: 2rem 1.5rem;
     }
 }
-/* Adicione esta nova regra ao seu style.css */
-section[id] {
-  scroll-margin-top: 60px; /* Ajuste este valor se necessário */
-}
+
 /* ajustar os espaço do id */
 [id] {
   scroll-margin-top: 140px; /* Ajuste este valor se necessário */
