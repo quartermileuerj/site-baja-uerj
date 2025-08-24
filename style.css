@@ -34,7 +34,7 @@ body {
 /* Cabeçalho e Navegação */
 header {
     background-color: var(--cor-fundo);
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
@@ -61,7 +61,7 @@ header nav a {
     text-decoration: none;
     color: var(--cor-secundaria);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
@@ -413,11 +413,9 @@ footer .container {
 .conteudo-descricao p {
     padding: 1rem 0; /* Espaçamento interno para o texto não colar nas bordas */
 }
-/* ajustar os espaço do id */
+/* contole de id */
 [id] {
-  scroll-margin-top: 140px; /* Ajuste este valor se necessário */
-}
-
+  scroll-margin-top: 100px; /* Ajuste este valor se necessário */
 }
 /* Aplica estes estilos em telas com 768px de largura ou menos */
 @media (max-width: 768px) {
