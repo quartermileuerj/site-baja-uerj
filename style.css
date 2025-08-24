@@ -413,6 +413,10 @@ footer .container {
 .conteudo-descricao p {
     padding: 1rem 0; /* Espaçamento interno para o texto não colar nas bordas */
 }
+/* ajustar os espaço do id */
+[id] {
+  scroll-margin-top: 140px; /* Ajuste este valor se necessário */
+}
 
 }
 /* Aplica estes estilos em telas com 768px de largura ou menos */
@@ -463,9 +467,4 @@ footer .container {
     .modal-conteudo {
         padding: 2rem 1.5rem;
     }
-}
-
-/* ajustar os espaço do id */
-[id] {
-  scroll-margin-top: 140px; /* Ajuste este valor se necessário */
 }
