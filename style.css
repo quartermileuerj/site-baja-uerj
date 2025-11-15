@@ -185,15 +185,15 @@ h2 {
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Seção Patrocinadores */
-.patrocinadores-grid {
+/* Seção Apoiadores */
+.apoiadores-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     align-items: center;
 }
 
-.patrocinador-card {
+.apoiador-card {
     background: var(--cor-fundo);
     padding: 2rem;
     text-align: center;
@@ -201,18 +201,18 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.patrocinador-card img {
+.apoiador-card img {
     max-width: 180px; /* Ajuste o tamanho do logo conforme necessário */
     margin-bottom: 1.5rem;
     filter: grayscale(0%);
     transition: filter 0.3s ease;
 }
 
-.patrocinador-card:hover img {
+.apoiador-card:hover img {
     filter: grayscale(10%);
 }
 
-.patrocinador-card h3 {
+.apoiador-card h3 {
     color: var(--cor-primaria);
     margin-bottom: 0.5rem;
 }
@@ -399,6 +399,14 @@ footer .container {
     content: '−';
 }
 
+/* Doação: centraliza e espaça a linha do Pix */
+.doacao-section .pix {
+    text-align: center;
+    margin-top: 1.5rem; /* Espaçamento em relação à linha anterior */
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
 .conteudo-descricao {
     padding: 0 18px;
     background-color: var(--cor-fundo);
@@ -452,7 +460,7 @@ footer .container {
 
     .membros-grid,
     .galeria-grid,
-    .patrocinadores-grid {
+    .apoiadores-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
